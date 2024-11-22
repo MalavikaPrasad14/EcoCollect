@@ -1,0 +1,31 @@
+/* Centers the form and heading */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: auto;
+    margin: 0%;
+  }
+  
+  .form-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .booking-form {
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Adjusts label position */
+  .MuiInputLabel-root {
+    font-size: 14px;
+  }
+  

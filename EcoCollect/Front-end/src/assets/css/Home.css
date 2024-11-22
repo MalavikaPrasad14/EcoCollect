@@ -1,0 +1,120 @@
+/* Home.css */
+
+.banner {
+    position: relative;
+    height: 85vh;
+    background: url('/images/bg2.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-position 0.9s ease-in-out, transform 0.9s ease-in-out;
+
+}
+
+.banner:hover {
+    transform: scale(1.03);
+    /* Slightly scale up the banner */
+    background-position: center right left;
+    /* Move the background slightly for effect */
+}
+
+
+.bannerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.571);
+    /* Semi-transparent overlay */
+    z-index: 1;
+    transition: background-position 0.9s ease-in-out, transform 0.9s ease-in-out;
+
+    /* Ensure it sits below the text and button */
+}
+
+.bannerText {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.banner-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    color: #000000;
+    background: #eeff00;
+    border-radius: 5px;
+    text-decoration: none;
+    /* transition: background 0.3s, transform 0.3s; */
+}
+
+.banner-btn:hover {
+    color: #fff;
+    background: #00b34bba;
+    /* transform: translateY(-2px); */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.gallery-section {
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    background-color: #daf0db;
+}
+
+.gallery-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.gallery-item {
+    min-width: 500px;
+    margin: 0 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.about-us {
+    padding: 50px 25px 35px 25px;
+    background: #25b32c94;
+    text-align: center;
+}
+
+.about-us h2 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 70vh;
+    }
+
+    .gallery-item {
+        min-width: 150px;
+    }
+
+    .bannerText h1 {
+        font-size: 1.5em;
+    }
+}
